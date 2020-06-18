@@ -1,0 +1,119 @@
+<div class="gn-search-filter col-lg-12 advancedSearchForm">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-1">
+      <h3 data-translate="">what</h3>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label for="categoriesF"
+                class="control-label">
+            <span data-translate="" class="control-label-span">categories</span>
+            <input type="text" id="categoriesF" value=""
+                  class="form-control"
+                  gn-typeahead="categoriesOptions"
+                  gn-values="searchObj.params._cat"/>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label for="keywordsF"
+                class="control-label">
+            <span data-translate="" class="control-label-span">keywords</span>
+            <input type="text" id="keywordsF" value=""
+                  class="form-control"
+                  gn-values="searchObj.params.keyword"
+                  gn-typeahead="keywordsOptions"/>
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-12">
+          <label for="orgNameF"
+                class="control-label">
+            <span data-translate="" class="control-label-span">orgName</span>
+            <input type="text" id="orgNameF" value=""
+                  class="form-control"
+                  gn-values="searchObj.params.orgName"
+                  gn-typeahead="orgNameOptions"/>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-5 gn-search-filter-datepickers">
+      <h3 data-translate="">when</h3>
+      <div data-gn-period-chooser="resourcesCreatedTheLast"
+           data-date-from="searchObj.params.creationDateFrom"
+           data-date-to="searchObj.params.creationDateTo"
+           class="gn-search-filter-datepicker">
+      </div>
+
+      <div data-gn-period-chooser="recordsCreatedTheLast"
+           data-date-from="searchObj.params.dateFrom"
+           data-date-to="searchObj.params.dateTo"
+           class="gn-search-filter-datepicker">
+      </div>
+    </div>
+    </div>
+    <div class="row">
+       <div class="col-md-12 col-md-offset-1" >
+                <h3 data-translate="">where</h3>
+                   <button data-ng-click="toggleMap()"
+                          title="{{'toggleMiniMap' | translate}}"
+                   >Map</button>
+				  <div style="display:block; overflow:visible;">
+                  <table>
+                  <tr>
+                    <td>South : </td><td><input id="src_south" ng-model="coord.ymin" class="form-control" type="text"></td>
+                    <td>
+                        North: </td><td><input class="form-control" id="src_north" ng-model="coord.ymax"  type="text">
+                     </td>
+                  </tr>
+                  <tr>
+                    <td>West : </td><td><input  id="src_west" ng-model="coord.xmin" class="form-control" type="text"></td>
+                    <td>
+                        East: </td><td><input class="form-control" id="src_east"ng-model="coord.xmax" type="text">
+                     </td>
+                  </tr>
+                  <button data-ng-click="drawBBoxOnMap()"
+                          title="draw map"
+                   >Search for BBox</button>
+                </table>
+                       <div data-gn-map-field="searchObj.searchMap"
+                       data-gn-map-field-geom="searchObj.params.geometry"
+                       data-gn-map-field-opt="searchObj.mapfieldOption"
+                       class="gn-search-map">               
+                        </div>
+                        <div id="mouse-position"></div>                    
+              </div>
+              
+        </div>
+  </div>
+  
+</div>
+
+<script>
+
+    //ftheeten
+    //var url_graticule_json="http://172.16.11.178:8080/geonetwork/images/rmca_data/graticule.geojsonl.json";
+    
+    //$( document ).ready(function() {
+    //console.log( "ready!" );
+    //console.log( "test!" );
+    //var scope = angular.element("#src_west").scope();
+    /*$.getJSON( url_graticule_json , function( data ) {
+        console.log("DONE");
+         console.log(data);
+        scope.addGraticule(data);
+     }).fail(function(xhr, status, error) {
+        console.log("ERROR");
+        console.log(xhr);
+        console.log(status);
+         console.log(error);
+  });*/
+    //scope.addPositionControl();
+    
+    // });
+console.log("INIT_ENHANCED");
+var scope = angular.element("#src_west").scope();
+scope.addPositionControl();
+</script>
