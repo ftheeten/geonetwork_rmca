@@ -1,0 +1,73 @@
+<!--ftheeten-->
+<div data-ng-controller="GnMdViewController">
+<div data-ng-include src="'../../catalog/views/default/templates/rmcaTitle.html'"> </div>
+<script src="/geonetwork/images/extra_js/ckeditor4/ckeditor.js" ></script>
+<div  id="main_content">
+</div>
+
+        <textarea data-ng-if="user.isEditorOrMore()" name="ckeditor" id="ckeditor"/>
+            
+       
+        <p><input data-ng-if="user.isEditorOrMore()" type="button" id="submit" value="Submit"></p>
+ 
+
+<script language="javascript">
+var key="help_fre";
+	function updatePage()
+	{
+				  $.getJSON( location.protocol + '//' + location.host +"/geocatalogue_addons/ck_service_reader.php", 
+				 {
+					page: key
+					
+				})
+				.done(function( data_tmp ) {
+					
+				  $("#main_content").html(data_tmp[0].content);
+				  CKEDITOR.instances.ckeditor.setData(data_tmp[0].content);
+				 
+				  
+				});
+	}
+	$(document).ready(
+		function()
+		{
+				
+
+			 updatePage();
+			 
+		}
+	);
+	
+</script>
+<script language="javascript" data-ng-if="user.isEditorOrMore()">
+
+$(document).ready(
+	function()
+	{
+	 CKEDITOR.replace( 'ckeditor' );
+	 $("#submit").click(
+				function()
+				{
+					
+					$.post(  location.protocol + '//' + location.host +"/geocatalogue_addons/ck_service.php", { page:key, data:encodeURIComponent(CKEDITOR.instances.ckeditor.getData()) }, function( data ) {
+						  
+						  updatePage();
+						 
+						}, "json").done(
+							function()
+							{
+								 
+							}
+						);
+				   
+				}
+			);
+			 updatePage();
+	}
+	
+	
+);
+	
+</script>
+
+</div>

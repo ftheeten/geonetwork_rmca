@@ -45,15 +45,35 @@
       <div data-ng-include="'../../catalog/views/default/templates/home.html'"
            data-ng-if="activeTab == '/searchtext'"/>
       <div data-ng-include="'../../catalog/views/default/templates/collaborate.html'"
-           data-ng-if="activeTab == '/collaborate'"/>
+           data-ng-if="activeTab == '/collaborate' && lang !='fre'  && lang !='dut'  "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/collaborate_fre.html'"
+           data-ng-if="activeTab == '/collaborate' && lang =='fre'  "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/collaborate_dut.html'"
+           data-ng-if="activeTab == '/collaborate'  && lang =='dut'  "/>
       <div data-ng-include="'../../catalog/views/default/templates/understand.html'"
-           data-ng-if="activeTab == '/understand'"/>
+           data-ng-if="activeTab == '/understand' && lang !='fre'  && lang !='dut' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/understand_fre.html'"
+           data-ng-if="activeTab == '/understand' && lang =='fre' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/understand_dut.html'"
+           data-ng-if="activeTab == '/understand' && lang =='dut'"/>
       <div data-ng-include="'../../catalog/views/default/templates/faq.html'"
-           data-ng-if="activeTab == '/faq'"/>
+           data-ng-if="activeTab == '/faq' && lang !='fre'  && lang !='dut' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/faq_fre.html'"
+           data-ng-if="activeTab == '/faq' && lang =='fre' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/faq_dut.html'"
+           data-ng-if="activeTab == '/faq' && lang =='dut' "/>
 	  <div data-ng-include="'../../catalog/views/default/templates/contactus.html'"
-           data-ng-if="activeTab == '/contactus'"/>
-       <div data-ng-include="'../../catalog/views/default/templates/help.html'"
-           data-ng-if="activeTab == '/help'"/>
+           data-ng-if="activeTab == '/contactus' && lang !='fre'  && lang !='dut' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/contactus_fre.html'"
+           data-ng-if="activeTab == '/contactus'  && lang =='fre' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/contactus_dut.html'"
+           data-ng-if="activeTab == '/contactus'  && lang =='dut' "/>
+      <div data-ng-include="'../../catalog/views/default/templates/help.html'"
+           data-ng-if="activeTab == '/help' && lang !='fre'  && lang !='dut' "/>
+      <div data-ng-include="'../../catalog/views/default/templates/help_fre.html'"
+           data-ng-if="activeTab == '/help'  && lang =='fre' "/>
+	  <div data-ng-include="'../../catalog/views/default/templates/help_dut.html'"
+           data-ng-if="activeTab == '/help'  && lang =='dut' "/>
     </div>
   </div>
 </div>
