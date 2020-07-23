@@ -5,13 +5,12 @@
   <div class="row gn-top-search">
     <div data-ng-class="fluidLayout ? 'container-fluid' : 'container'">
       <div class="col-md-12">
-        <div class="row">
+        
           <div class="col-md-offset-3 col-md-6 relative">
             <div class="input-group gn-form-any">
               <button data-gn-user-searches-list=""
                       data-ng-cloak=""
                       data-mode="button"/>
-
               <input type="text"
                     class="form-control input-lg"
                     id="gn-any-field"
@@ -23,20 +22,9 @@
                     data-typeahead-loading="anyLoading" class="form-control"
                     data-typeahead-min-length="1"
                     data-typeahead-focus-first="false"
-                    data-typeahead-wait-ms="300">     
-			  			 
-              <div class="input-group-btn">
-                <button type="button"
-                        class="btn btn-default btn-lg"
-                        title="{{'advanced' | translate}}"
-                        data-ng-model="searchObj.advancedMode"
-                        btn-checkbox=""
-                        btn-checkbox-true="1"
-                        btn-checkbox-false="0">                 
-						{{'advancedForm' | translate}}
-                </button>
-
-                <button type="button"
+                    data-typeahead-wait-ms="300"> 	  			 
+              <div class="input-group-btn">               
+                 <button type="button"
                         data-ng-click="triggerSearch()"
                         title="{{'search' | translate}}"
                         class="btn btn-primary btn-lg">
@@ -45,7 +33,6 @@
                   <span class="sr-only" data-translate="">search</span>
                   &nbsp;&nbsp;
                 </button>
-
                 <button type="button"
                         data-ng-click="resetSearch(searchObj.defaultParams);"
                         title="{{'ClearTitle' | translate}}"
@@ -56,7 +43,10 @@
               </div>
 			 
             </div>
-			 <div  >
+          </div>
+          <div class="row">
+            <div class="col-md-offset-3 col-md-6 relative">          
+			 <div class="col-md-3">
 			 <!--ftheeten-->
 			   <label>
 					<input type="radio" ng-model="searchObj.exclusive"  ng-value="{{true}}"/>
@@ -67,6 +57,16 @@
 					 {{'or' | translate}}
 				</label>
 			  </div>
+               <button type="button"
+                        class="btn btn-default btn-lg"
+                        title="{{'advanced' | translate}}"
+                        data-ng-model="searchObj.advancedMode"
+                        btn-checkbox=""
+                        btn-checkbox-true="1"
+                        btn-checkbox-false="0">                 
+						{{'advancedForm' | translate}}
+                </button>
+             
           </div>
           <div class="col-lg-3">
           </div>

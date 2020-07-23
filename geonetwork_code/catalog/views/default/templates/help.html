@@ -24,7 +24,8 @@ var key="help";
 					
 				  $("#main_content").html(data_tmp[0].content);
 				  CKEDITOR.instances.ckeditor.setData(data_tmp[0].content);
-				 
+				   $(".MsoTableGrid").css("width", "auto");
+                  $(".MsoTableGrid > tbody > tr > td").css("width", "auto");
 				  
 				});
 	}

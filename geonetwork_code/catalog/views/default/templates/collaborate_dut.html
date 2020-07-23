@@ -12,7 +12,7 @@
  
 
 <script language="javascript">
-var key="collaborate_fre";
+var key="collaborate_dut";
 	function updatePage()
 	{
 				  $.getJSON( location.protocol + '//' + location.host +"/geocatalogue_addons/ck_service_reader.php", 
@@ -24,6 +24,8 @@ var key="collaborate_fre";
 					
 				  $("#main_content").html(data_tmp[0].content);
 				  CKEDITOR.instances.ckeditor.setData(data_tmp[0].content);
+                   $(".MsoTableGrid").css("width", "auto");
+                  $(".MsoTableGrid > tbody > tr > td").css("width", "auto");
 				 
 				  
 				});

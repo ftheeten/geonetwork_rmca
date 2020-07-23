@@ -2,7 +2,12 @@
 <div data-ng-controller="GnMdViewController">
 <div data-ng-include src="'../../catalog/views/default/templates/rmcaTitle.html'"> </div>
 <script src="/geonetwork/images/extra_js/ckeditor4/ckeditor.js" ></script>
-<div  id="main_content">
+<style>
+
+</style>
+<div class="row">
+<div  id="main_content" >
+</div>
 </div>
 
         <textarea data-ng-if="user.isEditorOrMore()" name="ckeditor" id="ckeditor"/>
@@ -24,7 +29,11 @@ var key="understand";
 					
 				  $("#main_content").html(data_tmp[0].content);
 				  CKEDITOR.instances.ckeditor.setData(data_tmp[0].content);
-				 
+                  $(".MsoTableGrid").css("width", "auto");
+                  $(".MsoTableGrid > tbody > tr > td").css("width", "auto");
+                    $(".MsoTableGrid").css("width", "auto");
+                  $(".MsoTableGrid > tbody > tr > td").css("width", "auto");
+				  
 				  
 				});
 	}
