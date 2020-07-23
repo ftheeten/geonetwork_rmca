@@ -521,10 +521,11 @@
     "dateTo": "Fiches mises à jour avant",
     "activeFilters": "Filtres",
     "geometryFilter": "Emprise",
-    "and": "et",
+	"and": "et",
     "search_text" : "Chercher",
     "understand" : "Comprendre",
     "collaborate" : "Collaborer",
     "faq" : "F.A.Q.",
-    "presentation" : "Géocatalogue du Musée Royal de l'Afrique centrale"
+    "presentation" : "Géocatalogue du Musée Royal de l'Afrique centrale",
+    "contactus" : "Nous contacter"
 }

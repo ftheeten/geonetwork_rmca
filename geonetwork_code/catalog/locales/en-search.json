@@ -89,6 +89,7 @@
   "addToMap": "Add to map",
   "addToMaponlinesrc": "Add to map",
   "addServiceLayersToMaponlinesrc": "Add service layer to map",
+  "viewLayerInExternalViewer": "View layer in external viewer",
   "mapLinkonlinesrc": "Load map",
   "openRecord": "View record",
   "openRecordhasfeaturecat": "Associated record",
@@ -510,6 +511,16 @@
   "lessFacet": "{{count}} less",
   "allFacet": "all ({{count}})",
   "initialFacet": "initial ({{count}})",
+  "removeThisFilter": "Remove this filter",
+  "removeAllFilters": "Remove all filters",
+  "creationDateFrom": "Resources created after",
+  "creationDateTo": "Resources created before",
+  "changeDateFrom": "Resources changed after",
+  "changeDateTo": "Resources changed before",
+  "dateFrom": "Records updated after",
+  "dateTo": "Records updated before",
+  "activeFilters": "Active filters",
+  "geometryFilter": "Bounding Box",
   "and": "and",
   "search_text" : "Search",
   "understand" : "Understand",
@@ -521,5 +532,6 @@
   "understand" : "Understand",
   "collaborate" : "Collaborate",
   "faq" : "F.A.Q.",
-  "presentation" : "Géocatalogue of the Royal Museum for Central Africa"
+  "presentation" : "Geocatalogue of the Royal Museum for Central Africa",
+  "contactus" : "contact us"
 }
